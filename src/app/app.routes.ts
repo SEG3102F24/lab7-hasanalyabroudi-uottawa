@@ -1,4 +1,5 @@
 import { Routes } from '@angular/router';
+import { AuthorsComponent } from './authors/authors.component';
 import {HomeComponent} from "./home/home.component";
 import {AboutComponent} from "./about/about.component";
 import {ContactComponent} from "./contact/contact.component";
@@ -13,6 +14,7 @@ const booksRoutes: Routes = [
 ];
 
 export const routes: Routes = [
+  {path: 'authors', component: AuthorsComponent},
   {path: 'home', component: HomeComponent},
   {path: 'about', component: AboutComponent},
   {path: 'contact', component: ContactComponent},
