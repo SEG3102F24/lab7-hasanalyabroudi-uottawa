@@ -1,1 +1,17 @@
-<p>authors works!</p>
+<div>
+  <h2>Search for Author</h2>
+  <form (ngSubmit)="searchAuthor()">
+    <label for="authorId">Author ID:</label>
+    <input type="text" id="authorId" [(ngModel)]="authorId" name="authorId" required />
+    <button type="submit">Search</button>
+  </form>
+
+  <div *ngIf="author">
+    <h3>Author Details</h3>
+    <p><strong>ID:</strong> {{ author.id }}</p>
+    <p><strong>First Name:</strong> {{ author.firstName }}</p>
+    <p><strong>Last Name:</strong> {{ author.lastName }}</p>
+  </div>
+
+  <p *ngIf="errorMessage" style="color: red;">{{ errorMessage }}</p>
+</div>
